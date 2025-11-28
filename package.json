@@ -1,19 +1,28 @@
 {
-  "name": "code-formatter",
+  "name": "komodoro",
   "version": "0.1.0",
-  "description": "a simple code formatter for js/ts",
-  "license": "ISC",
-  "author": "Camilo Barbosa",
+  "description": "A small TypeScript code formatter focused on simplicity.",
+  "author": "Camilo Barbosa <juanbedoya.barbosa@gmail.com>",
+  "license": "MIT",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "dist/cli.js",
   "bin": {
-    "tiny-ts-fmt": "dist/cli.js"
+    "komodoro": "dist/cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbosacamilo/komodoro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/barbosacamilo/komodoro/issues"
+  },
+  "homepage": "https://github.com/barbosacamilo/komodoro#readme",
   "scripts": {
     "build": "tsc",
     "dev": "nodemon --watch src --ext ts --exec \"npm run build && node dist/cli.js\"",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "typescript": "^5.9.3"
@@ -22,5 +31,10 @@
     "@types/node": "^24.10.1",
     "nodemon": "^3.1.11",
     "vitest": "^4.0.14"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }

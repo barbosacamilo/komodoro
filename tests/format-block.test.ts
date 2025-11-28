@@ -2,7 +2,10 @@ import { describe, it, expect } from "vitest";
 import * as ts from "typescript";
 import { formatBlock } from "../src/format/block";
 
-function makeBlockFromBody(body: string): { src: ts.SourceFile; block: ts.Block } {
+function makeBlockFromBody(body: string): {
+  src: ts.SourceFile;
+  block: ts.Block;
+} {
   const sourceText = `function test() ${body}`;
   const src = ts.createSourceFile(
     "test.ts",
