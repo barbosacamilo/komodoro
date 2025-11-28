@@ -1,0 +1,26 @@
+{
+  "name": "code-formatter",
+  "version": "0.1.0",
+  "description": "a simple code formatter for js/ts",
+  "license": "ISC",
+  "author": "Camilo Barbosa",
+  "type": "commonjs",
+  "main": "index.js",
+  "bin": {
+    "tiny-ts-fmt": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build && node dist/cli.js\"",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "nodemon": "^3.1.11",
+    "vitest": "^4.0.14"
+  }
+}
